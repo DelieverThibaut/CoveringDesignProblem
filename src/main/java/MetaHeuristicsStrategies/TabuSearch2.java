@@ -1,3 +1,4 @@
+/*
 package CoveringDesignProblem.MetaHeuristicsStrategies;
 
 import CoveringDesignProblem.Block;
@@ -41,7 +42,9 @@ public class TabuSearch2 implements IMetaHeuristicStrategy {
         int count = 0;
 
         while (count++ < MaxIterations){
-            /*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Count = " + count);*/
+            */
+/*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Count = " + count);*//*
+
             if(!tabuSearch()){
                 System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - TabuSearch ended since they cannot be no candidates generated.");
                 if(CoveringDesign.getConflicts() == 0) {
@@ -59,7 +62,9 @@ public class TabuSearch2 implements IMetaHeuristicStrategy {
         }
 
         System.out.println("FunctionCall_END \t\t~ executeStrategy()");
-        /*checkSolution();*/
+        */
+/*checkSolution();*//*
+
         return Solution;
     }
 
@@ -118,13 +123,13 @@ public class TabuSearch2 implements IMetaHeuristicStrategy {
 
         for(Candidate c : CandidateList){
             if(bestCandidate == null) bestCandidate = c;
-            if(c.getConflicts() == 0){
+            if(c.getDeltaConflicts() == 0){
                 bestCandidate = c;
                 break;
             }
-            else if(c.getConflicts() == bestCandidate.getConflicts() && !TabuList.contains(c) && Rand.nextBoolean()){
+            else if(c.getDeltaConflicts() == bestCandidate.getDeltaConflicts() && !TabuList.contains(c) && Rand.nextBoolean()){
                 bestCandidate = c;
-            } else if(c.getConflicts() < bestCandidate.getConflicts() && !TabuList.contains(c)){
+            } else if(c.getDeltaConflicts() < bestCandidate.getDeltaConflicts() && !TabuList.contains(c)){
                 bestCandidate = c;
             }
         }
@@ -158,6 +163,9 @@ public class TabuSearch2 implements IMetaHeuristicStrategy {
 
         this.TabuList.clear();
 
-        /*checkSolution();*/
+        */
+/*checkSolution();*//*
+
     }
 }
+*/

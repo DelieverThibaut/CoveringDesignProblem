@@ -4,22 +4,22 @@ import CoveringDesignProblem.Main;
 import org.junit.jupiter.api.Test;
 
 /**
- * V = 84
- * K = 8
+ * V = 52
+ * K = 9
  * T = 2
  *
- * CurrentSolution = 137;
- * MinimalSolution = 126;
+ * CurrentSolution = 45;
+ * MinimalSolution = 42;
  */
-public class Test_84_8_2 {
-    private final int V = 84;
-    private final int K = 8;
+public class Test_52_9_2 {
+    private final int V = 52;
+    private final int K = 9;
     private final int T = 2;
-    private final int ExpectedCoveringNum = 126;
+    private final int ExpectedCoveringNum = 45;
 
     @Test
     void coveringDesign_Main() {
-        Main.main(new Integer[]{V, K, T, 7, 1, ExpectedCoveringNum});
+        Main.main(new Integer[]{V, K, T, 0, 1, ExpectedCoveringNum});
     }
 
     /*@Test

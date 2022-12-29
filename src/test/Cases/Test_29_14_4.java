@@ -4,18 +4,18 @@ import CoveringDesignProblem.Main;
 import org.junit.jupiter.api.Test;
 
 /**
- * V = 84
- * K = 8
- * T = 2
+ * V = 29
+ * K = 14
+ * T = 4
  *
- * CurrentSolution = 137;
- * MinimalSolution = 126;
+ * CurrentSolution = 43;
+ * MinimalSolution = 34;
  */
-public class Test_84_8_2 {
-    private final int V = 84;
-    private final int K = 8;
-    private final int T = 2;
-    private final int ExpectedCoveringNum = 126;
+public class Test_29_14_4 {
+    private final int V = 29;
+    private final int K = 14;
+    private final int T = 4;
+    private final int ExpectedCoveringNum = 34;
 
     @Test
     void coveringDesign_Main() {

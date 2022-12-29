@@ -43,7 +43,7 @@ public class Test_24_15_5 {
 
     @Test
     void coveringDesign_Main() {
-        Main.main(new Integer[]{V, K, T, 6, 3, ExpectedCoveringNum});
+        Main.main(new Integer[]{V, K, T, 8, 1, ExpectedCoveringNum});
     }
 
     /*@Test

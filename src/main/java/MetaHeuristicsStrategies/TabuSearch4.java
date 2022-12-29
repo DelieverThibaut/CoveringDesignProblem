@@ -1,3 +1,4 @@
+/*
 package CoveringDesignProblem.MetaHeuristicsStrategies;
 
 import CoveringDesignProblem.Block;
@@ -59,13 +60,13 @@ public class TabuSearch4 implements IMetaHeuristicStrategy {
 
         for(Candidate c : CandidateList){
             if(bestCandidate == null) bestCandidate = c;
-            if(c.getConflicts() == 0){
+            if(c.getDeltaConflicts() == 0){
                 bestCandidate = c;
                 break;
             }
-            else if(c.getConflicts() == bestCandidate.getConflicts() && !TabuList.contains(c) && Rand.nextBoolean()){
+            else if(c.getDeltaConflicts() == bestCandidate.getDeltaConflicts() && !TabuList.contains(c) && Rand.nextBoolean()){
                 bestCandidate = c;
-            } else if(c.getConflicts() < bestCandidate.getConflicts() && !TabuList.contains(c)){
+            } else if(c.getDeltaConflicts() < bestCandidate.getDeltaConflicts() && !TabuList.contains(c)){
                 bestCandidate = c;
             }
         }
@@ -123,7 +124,7 @@ public class TabuSearch4 implements IMetaHeuristicStrategy {
         int max = 0;
         List<Block> blocksToRemove = new ArrayList<>();
         for(Block blck : CoveringDesign.getBlocks()){
-            int count = blck.getCoveredTSubsets().stream().mapToInt(set -> CoveringDesign.getTSubsetValue(set)).sum();
+            int count = blck.getCoveredTSubsets().stream().mapToInt(set -> CoveringDesign.getTSubsetValue(set).size()).sum();
             if(count > max){
                 blocksToRemove.clear();
                 blocksToRemove.add(blck);
@@ -157,3 +158,4 @@ public class TabuSearch4 implements IMetaHeuristicStrategy {
         for (Block block : CoveringDesign.getBlocks()) Solution.add((BitSet) block.getElements().clone());
     }
 }
+*/

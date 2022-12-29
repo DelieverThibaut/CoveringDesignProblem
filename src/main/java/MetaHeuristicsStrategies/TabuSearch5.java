@@ -1,3 +1,4 @@
+/*
 package CoveringDesignProblem.MetaHeuristicsStrategies;
 
 import CoveringDesignProblem.Block;
@@ -25,30 +26,42 @@ public class TabuSearch5 implements IMetaHeuristicStrategy {
 
     @Override
     public Set<BitSet> executeStrategy(CoveringDesign coveringDesign) {
-        /*System.out.println("FunctionCall_START \t\t~ executeStrategy()");*/
+        */
+/*System.out.println("FunctionCall_START \t\t~ executeStrategy()");*//*
+
         CoveringDesign = coveringDesign;
         CandidateList = new HashSet<>();
         UncoveredIntegers = new HashSet<>();
         TooMuchCoveredIntegers = new HashSet<>();
-        /*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Solution found: #Blocks = " + CoveringDesign.getBlocks().size());*/
+        */
+/*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Solution found: #Blocks = " + CoveringDesign.getBlocks().size());*//*
+
         setSolution();
         removeBlock();
         int count = 0;
         while (count++ < MaxIterations){
-            /*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Count = "+count+" - Conflicts = "+CoveringDesign.getConflicts());*/
+            */
+/*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Count = "+count+" - Conflicts = "+CoveringDesign.getConflicts());*//*
+
             if(CoveringDesign.getConflicts() == 0){
-                /*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Better solution found, "+count+": #Blocks = " + CoveringDesign.getBlocks().size());*/
+                */
+/*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Better solution found, "+count+": #Blocks = " + CoveringDesign.getBlocks().size());*//*
+
                 setSolution();
                 removeBlock();
                 TabuList.clear();
                 count = 0;
             }
             else if(!tabuSearch()){
-                /*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - TabuSearch ended since they cannot be no candidates generated.");*/
+                */
+/*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - TabuSearch ended since they cannot be no candidates generated.");*//*
+
                 break;
             }
         }
-        /*System.out.println("FunctionCall_END \t\t~ executeStrategy()");*/
+        */
+/*System.out.println("FunctionCall_END \t\t~ executeStrategy()");*//*
+
         return Solution;
     }
 
@@ -59,13 +72,13 @@ public class TabuSearch5 implements IMetaHeuristicStrategy {
 
         for(Candidate c : CandidateList){
             if(bestCandidate == null) bestCandidate = c;
-            if(c.getConflicts() == 0){
+            if(c.getDeltaConflicts() == 0){
                 bestCandidate = c;
                 break;
             }
-            else if(c.getConflicts() == bestCandidate.getConflicts() && !TabuList.contains(c) && Rand.nextBoolean()){
+            else if(c.getDeltaConflicts() == bestCandidate.getDeltaConflicts() && !TabuList.contains(c) && Rand.nextBoolean()){
                 bestCandidate = c;
-            } else if(c.getConflicts() < bestCandidate.getConflicts() && !TabuList.contains(c)){
+            } else if(c.getDeltaConflicts() < bestCandidate.getDeltaConflicts() && !TabuList.contains(c)){
                 bestCandidate = c;
             }
         }
@@ -98,10 +111,10 @@ public class TabuSearch5 implements IMetaHeuristicStrategy {
                             int delta = 0;
                             Set<BitSet> sets = block.getCoveredTSubsets().stream().filter(subset -> subset.get(i)).collect(Collectors.toSet());
                             for(BitSet set : sets){
-                                if(CoveringDesign.getTSubsetValue(set) == 1) delta++;
+                                if(CoveringDesign.getTSubsetValue(set).size() == 1) delta++;
                                 set.set(i, false);
                                 set.set(j);
-                                if(CoveringDesign.getTSubsetValue(set) == 0) delta--;
+                                if(CoveringDesign.getTSubsetValue(set).size() == 0) delta--;
                                 set.set(i);
                                 set.set(j, false);
                             }
@@ -119,10 +132,10 @@ public class TabuSearch5 implements IMetaHeuristicStrategy {
                                 int delta = 0;
                                 Set<BitSet> sets = block.getCoveredTSubsets().stream().filter(subset -> subset.get(i)).collect(Collectors.toSet());
                                 for(BitSet set : sets){
-                                    if(CoveringDesign.getTSubsetValue(set) == 1) delta++;
+                                    if(CoveringDesign.getTSubsetValue(set).size() == 1) delta++;
                                     set.set(i, false);
                                     set.set(j);
-                                    if(CoveringDesign.getTSubsetValue(set) == 0) delta--;
+                                    if(CoveringDesign.getTSubsetValue(set).size() == 0) delta--;
                                     set.set(i);
                                     set.set(j, false);
                                 }
@@ -144,7 +157,7 @@ public class TabuSearch5 implements IMetaHeuristicStrategy {
         int max = 0;
         List<Block> blocksToRemove = new ArrayList<>();
         for(Block blck : CoveringDesign.getBlocks()){
-            int count = blck.getCoveredTSubsets().stream().mapToInt(set -> CoveringDesign.getTSubsetValue(set)).sum();
+            int count = blck.getCoveredTSubsets().stream().mapToInt(set -> CoveringDesign.getTSubsetValue(set).size()).sum();
             if(count > max){
                 blocksToRemove.clear();
                 blocksToRemove.add(blck);
@@ -153,7 +166,9 @@ public class TabuSearch5 implements IMetaHeuristicStrategy {
             else if (count == max) blocksToRemove.add(blck);
         }
         Block blockToRemove = blocksToRemove.get(Rand.nextInt(blocksToRemove.size()));
-        /*System.out.println("\tFunctionCall_INFO \t~ removeBlock() - Block: " + blockToRemove.getElements());*/
+        */
+/*System.out.println("\tFunctionCall_INFO \t~ removeBlock() - Block: " + blockToRemove.getElements());*//*
+
         CoveringDesign.removeBlock(blockToRemove);
         Debugger.log("FunctionCall_END \t\t~ removeBlock()");
     }
@@ -177,4 +192,4 @@ public class TabuSearch5 implements IMetaHeuristicStrategy {
         Solution.clear();
         for (Block block : CoveringDesign.getBlocks()) Solution.add((BitSet) block.getElements().clone());
     }
-}
+}*/

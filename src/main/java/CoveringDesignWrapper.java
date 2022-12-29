@@ -24,13 +24,14 @@ public class CoveringDesignWrapper {
         this.CoveringDesign = new CoveringDesign(v, k, t);
         IMetaHeuristicStrategy strat;
         strat = switch (stratNum) {
-            case 1 -> new TabuSearch1();
+            /*case 1 -> new TabuSearch1();
             case 2 -> new TabuSearch2();
             case 3 -> new TabuSearch3();
             case 4 -> new TabuSearch4();
             case 5 -> new TabuSearch5();
-            case 6 -> new TabuSearch6();
-            default -> new TabuSearch4();
+            case 6 -> new TabuSearch6();*/
+            case 7 -> new TabuSearch7();
+            default -> new TabuSearch7();
         };
         setMetaHeuristicStrategy(strat);
         if(!manualStart) executeStrategy();

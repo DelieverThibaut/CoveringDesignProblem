@@ -1,3 +1,4 @@
+/*
 package CoveringDesignProblem.MetaHeuristicsStrategies;
 
 import CoveringDesignProblem.Block;
@@ -27,7 +28,9 @@ public class TabuSearch3 implements IMetaHeuristicStrategy {
 
     @Override
     public Set<BitSet> executeStrategy(CoveringDesign coveringDesign) {
-        /*System.out.println("FunctionCall_START \t\t~ executeStrategy()");*/
+        */
+/*System.out.println("FunctionCall_START \t\t~ executeStrategy()");*//*
+
 
         this.CoveringDesign = coveringDesign;
 
@@ -41,17 +44,25 @@ public class TabuSearch3 implements IMetaHeuristicStrategy {
         int count = 0;
 
         while (count++ < MaxIterations){
-            /*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Count = " + count);*/
+            */
+/*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Count = " + count);*//*
+
             if(CoveringDesign.getConflicts() == 0){
-                /*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Better solution found: #Blocks = " + this.CoveringDesign.getBlocks().size() );*/
+                */
+/*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Better solution found: #Blocks = " + this.CoveringDesign.getBlocks().size() );*//*
+
                 setSolution();
                 count = 0;
                 removeBlock();
             }
             if(!tabuSearch()){
-                /*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - TabuSearch ended since they cannot be no candidates generated.");*/
+                */
+/*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - TabuSearch ended since they cannot be no candidates generated.");*//*
+
                 if(CoveringDesign.getConflicts() == 0) {
-                    /*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Better solution found: #Blocks = " + this.CoveringDesign.getBlocks().size() );*/
+                    */
+/*System.out.println("\tFunctionCall_INFO \t~ executeStrategy() - Better solution found: #Blocks = " + this.CoveringDesign.getBlocks().size() );*//*
+
                     setSolution();
                     removeBlock();
                 }
@@ -60,8 +71,12 @@ public class TabuSearch3 implements IMetaHeuristicStrategy {
 
         }
 
-        /*System.out.println("FunctionCall_END \t\t~ executeStrategy()");*/
-        /*checkSolution();*/
+        */
+/*System.out.println("FunctionCall_END \t\t~ executeStrategy()");*//*
+
+        */
+/*checkSolution();*//*
+
         return Solution;
     }
 
@@ -128,13 +143,13 @@ public class TabuSearch3 implements IMetaHeuristicStrategy {
 
         for(Candidate c : CandidateList){
             if(bestCandidate == null) bestCandidate = c;
-            if(c.getConflicts() == 0){
+            if(c.getDeltaConflicts() == 0){
                 bestCandidate = c;
                 break;
             }
-            else if(c.getConflicts() == bestCandidate.getConflicts() && !TabuList.contains(c) && Rand.nextBoolean()){
+            else if(c.getDeltaConflicts() == bestCandidate.getDeltaConflicts() && !TabuList.contains(c) && Rand.nextBoolean()){
                 bestCandidate = c;
-            } else if(c.getConflicts() < bestCandidate.getConflicts() && !TabuList.contains(c)){
+            } else if(c.getDeltaConflicts() < bestCandidate.getDeltaConflicts() && !TabuList.contains(c)){
                 bestCandidate = c;
             }
         }
@@ -168,6 +183,9 @@ public class TabuSearch3 implements IMetaHeuristicStrategy {
 
         this.TabuList.clear();
 
-        /*checkSolution();*/
+        */
+/*checkSolution();*//*
+
     }
 }
+*/

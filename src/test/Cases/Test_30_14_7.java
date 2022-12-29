@@ -1,21 +1,45 @@
 package CoveringDesignProblem.Cases;
 
+import CoveringDesignProblem.CoveringDesignWrapper;
 import CoveringDesignProblem.Main;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 /**
- * V = 84
- * K = 8
- * T = 2
+ * V = 30
+ * K = 14
+ * T = 7
  *
- * CurrentSolution = 137;
- * MinimalSolution = 126;
+ * CurrentSolution = 1805;
+ * MinimalSolution = 804;
  */
-public class Test_84_8_2 {
-    private final int V = 84;
-    private final int K = 8;
-    private final int T = 2;
-    private final int ExpectedCoveringNum = 126;
+public class Test_30_14_7 {
+    private final int V = 30;
+    private final int K = 14;
+    private final int T = 7;
+    private final int ExpectedCoveringNum = 804;
+
+    @RepeatedTest(1000)
+    void coveringDesign_Strat5() {
+        int strat = 5;
+        CoveringDesignWrapper cd = new CoveringDesignWrapper(V, K, T, strat, false);
+        cd.printSolution();
+        assertTrue(cd.checkSolution());
+        assertEquals(ExpectedCoveringNum, cd.getSolution().size());
+    }
+
+    @RepeatedTest(1000)
+    void coveringDesign_Strat6() {
+        int strat = 6;
+        CoveringDesignWrapper cd = new CoveringDesignWrapper(V, K, T, strat, false);
+        cd.printSolution();
+        assertTrue(cd.checkSolution());
+        assertEquals(ExpectedCoveringNum, cd.getSolution().size());
+    }
+
 
     @Test
     void coveringDesign_Main() {

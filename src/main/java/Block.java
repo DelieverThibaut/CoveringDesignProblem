@@ -4,6 +4,7 @@ import CoveringDesignProblem.Exceptions.ElementAlreadyInBlockException;
 import CoveringDesignProblem.Exceptions.ElementNotFoundException;
 
 import java.util.BitSet;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -14,6 +15,7 @@ public class Block {
     private int T;
     private BitSet Elements;
     private Set<BitSet> CoveredTSubsets;
+    private HashMap<Integer, Integer> ElementFrequencyMap = new HashMap<>();
 
 
     public Block(int v, int t) {
@@ -32,7 +34,7 @@ public class Block {
         Elements = new BitSet(v);
         CoveredTSubsets = new HashSet<>();
 
-        elements.forEach(this::AddElement);
+        elements.forEach(this::addElement);
         CoveredTSubsets.addAll(generateAllTSubsets(elements, t));
         Debugger.log("FunctionCall_END \t\t~ Block("+v+")");
     }
@@ -42,7 +44,16 @@ public class Block {
     public int getV() { return this.V; }
     public BitSet getElements(){ return Elements; }
     public Set<BitSet> getCoveredTSubsets(){ return CoveredTSubsets; }
+    public int getElementFrequency(int element){ return ElementFrequencyMap.getOrDefault(element, 0); }
+    public void resetElementFrequency(){ ElementFrequencyMap.clear(); }
 
+    public void incrementFrequency(){
+        IntStream.iterate(Elements.nextSetBit(0), i -> i != -1, i -> Elements.nextSetBit(i + 1)).forEach(i -> ElementFrequencyMap.merge(i, 1, Integer::sum));
+    }
+
+    public void resetFrequency(){
+        ElementFrequencyMap.clear();
+    }
 
     private Set<BitSet> generateAllTSubsets(Set<Integer> elements, int t){
         return Util.getAllSubsetsOfLengthK(elements, t).stream().map(this::convertIntegerSetToBitSet).collect(Collectors.toCollection(HashSet::new));
@@ -82,7 +93,7 @@ public class Block {
     }
 
 
-    public void AddElement(int x){
+    public void addElement(int x){
         Elements.set(x);
         CoveredTSubsets.clear();
         if(Elements.cardinality() >= T) {
@@ -96,7 +107,7 @@ public class Block {
     }
 
 
-    public void ReplaceElement(int x, int y){
+    public void replaceElement(int x, int y){
         Debugger.log("FunctionCall_START \t~ replaceElement("+x+", "+y+")");
         if(!this.hasElement(x)) throw new ElementNotFoundException(String.format("The element (= %1$d) is not found inside this block!", x));
         if(this.hasElement(y)) throw new ElementAlreadyInBlockException(String.format("The element (= %1$d) is already inside this block!", y));

@@ -37,7 +37,7 @@ public class CoveringDesignConstructor {
 
     private void AddTSetToBlock(BitSet tSet){
         Debugger.log("FunctionCall_START \t\t~ AddTSetToBlock("+tSet+")");
-        if(CoveringDesign.getTSubsetValue(tSet) > 0) return;
+        if(CoveringDesign.getTSubsetValue(tSet).size() > 0) return;
         Debugger.log("\tFunctionCall_INFO \t~ AddTSetToBlock("+tSet+") - tSet not found in current blocks");
 
         int simVal = OpenBlock.simulateAddTSubset(tSet);
@@ -60,7 +60,7 @@ public class CoveringDesignConstructor {
             Debugger.log("\tFunctionCall_INFO \t~ AddOpenBlockToDesign() - size_check1 of open block: " + this.OpenBlock.size());
             int randomV = Rand.nextInt(this.CoveringDesign.getV());
             while(!isValidV(randomV)) randomV = (Rand.nextInt(this.CoveringDesign.getV()));
-            this.OpenBlock.AddElement(randomV);
+            this.OpenBlock.addElement(randomV);
             Debugger.log("\tFunctionCall_INFO \t~ AddOpenBlockToDesign() - size_check2 of open block: " + this.OpenBlock.size());
         }
         Debugger.log("\tFunctionCall_INFO \t~ AddOpenBlockToDesign() - add open block to design");
