@@ -60,49 +60,20 @@ bound for many cases. Both calculations are necessary to find the covering numbe
 
 
 ## References
-[1] A Chan and R Games. (n, k, t))-covering systems and
-error-trapping decoding (corresp. IEEE Transactions on
-Information Theory, 27(5):643–646, 1981.
-[2] Charles J Colbourn. CRC handbook of combinatorial
-designs. CRC press, 2010.
-[3] Chaoying Dai, Pak Ching Li, and Michel Toulouse.
-A cooperative multilevel tabu search algorithm for the
-covering design problem. In Artificial Evolution: 7th International
-Conference, Evolution Artificielle, EA 2005,
-Lille, France, October 26-28, 2005, Revised Selected
-Papers 7, pages 119–130. Springer, 2006.
-[4] Matthias Ehrgott. Multicriteria optimization, volume
-491. Springer Science & Business Media, 2005.
-[5] Kamal Fadlaoui and Philippe Galinier. A tabu search
-algorithm for the covering design problem. Journal of
-Heuristics, 17(6):659–674, 2011.
-[6] Daniel Gordon. Covering designs. https://www.
-dmgordon.org/cover/.
-[7] Daniel Gordon. Covering designs annotated bibliography.
-https://www.dmgordon.org/papers/annotated bib.
-pdf.
-[8] Daniel Gordon. La jolla repository tables. https://ljcr.
-dmgordon.org/cover/table.html.
+[1] A Chan and R Games. (n, k, t))-covering systems and error-trapping decoding (corresp. IEEE Transactions on Information Theory, 27(5):643–646, 1981.
+[2] Charles J Colbourn. CRC handbook of combinatorial designs. CRC press, 2010.
+[3] Chaoying Dai, Pak Ching Li, and Michel Toulouse. A cooperative multilevel tabu search algorithm for the covering design problem. In Artificial Evolution: 7th International Conference, Evolution Artificielle, EA 2005, Lille, France, October 26-28, 2005, Revised Selected Papers 7, pages 119–130. Springer, 2006. 
+[4] Matthias Ehrgott. Multicriteria optimization, volume 491. Springer Science & Business Media, 2005. 
+[5] Kamal Fadlaoui and Philippe Galinier. A tabu search algorithm for the covering design problem. Journal of Heuristics, 17(6):659–674, 2011. 
+[6] Daniel Gordon. Covering designs. https://www.dmgordon.org/cover/.
+[7] Daniel Gordon. Covering designs annotated bibliography. https://www.dmgordon.org/papers/annotated_bib.pdf.
+[8] Daniel Gordon. La jolla repository tables. https://ljcr.dmgordon.org/cover/table.html.
 [9] Daniel Gordon. Lower bound improvements.
-[10] Daniel Gordon. Steiner systems. https://www.
-dmgordon.org/steiner/.
-[11] Daniel M Gordon, Oren Patashnik, and Greg Kuperberg.
-New constructions for covering designs. Journal
-of Combinatorial Designs, 3(4):269–284, 1995.
-[12] Daniel Horsley. Generalising fisher’s inequality to coverings
-and packings. Combinatorica, 37(4):673–696,
-2017.
-[13] Daniel Horsley and Rakhi Singh. New lower bounds
-for t-coverings. Journal of Combinatorial Designs,
-26(8):369–386, 2018.
-[14] Franc¸ois Margot. Small covering designs by branchand-
-cut. Mathematical Programming, 94:207–220,
-2003.
-[15] Kari J Nurmela and Patric RJ O¨ sterga˚rd. Constructing
-covering designs by simulated annealing. Citeseer,
-1993.
+[10] Daniel Gordon. Steiner systems. https://www.dmgordon.org/steiner/.
+[11] Daniel M Gordon, Oren Patashnik, and Greg Kuperberg. New constructions for covering designs. Journal of Combinatorial Designs, 3(4):269–284, 1995. 
+[12] Daniel Horsley. Generalising fisher’s inequality to coverings and packings. Combinatorica, 37(4):673–696, 2017.
+[13] Daniel Horsley and Rakhi Singh. New lower bounds for t-coverings. Journal of Combinatorial Designs, 26(8):369–386, 2018. 
+[14] Franc¸ois Margot. Small covering designs by branchand-cut. Mathematical Programming, 94:207–220, 2003.
+[15] Kari J Nurmela and Patric RJ O¨ sterga˚rd. Constructing covering designs by simulated annealing. Citeseer, 1993.
 [16] Johanan Sch¨onheim. On coverings. 1964.
-[17] Thomas St¨utzle and Luis Paquete. Iterated local
-search. https://www.metaheuristics.org/index.php%
-3Fmain=3&amp;sub=33.html.
-
+[17] Thomas St¨utzle and Luis Paquete. Iterated local search. https://www.metaheuristics.org/index.php%3Fmain=3&amp;sub=33.html.
