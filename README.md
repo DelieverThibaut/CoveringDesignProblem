@@ -74,6 +74,6 @@ bound for many cases. Both calculations are necessary to find the covering numbe
 - [12] Daniel Horsley. Generalising fisher’s inequality to coverings and packings. Combinatorica, 37(4):673–696, 2017.
 - [13] Daniel Horsley and Rakhi Singh. New lower bounds for t-coverings. Journal of Combinatorial Designs, 26(8):369–386, 2018. 
 - [14] Franc¸ois Margot. Small covering designs by branchand-cut. Mathematical Programming, 94:207–220, 2003.
-- [15] Kari J Nurmela and Patric RJ O¨ sterga˚rd. Constructing covering designs by simulated annealing. Citeseer, 1993.
-- [16] Johanan Sch¨onheim. On coverings. 1964.
-- [17] Thomas St¨utzle and Luis Paquete. Iterated local search. https://www.metaheuristics.org/index.php%3Fmain=3&amp;sub=33.html.
+- [15] Kari J Nurmela and Patric RJ Östergard. Constructing covering designs by simulated annealing. Citeseer, 1993.
+- [16] Johanan Schönheim. On coverings. 1964.
+- [17] Thomas Stützle and Luis Paquete. Iterated local search. https://www.metaheuristics.org/index.php%3Fmain=3&amp;sub=33.html.
