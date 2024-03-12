@@ -1,14 +1,14 @@
 # The Covering Design Problem - Thibaut Deliever
 
-## Overview
 
+## Overview
 Uncovering the Optimal Solution: An ILS Approach to the Covering Design Problem.
 - **Definition:** A _(v,k,t)_ Covering Design is a collection of _k_-element subsets, called _blocks_, of 1,2,...,v, such that any _t_-element subset is contained in at _least_ one block. Each of these coverings gives an upper bound (UB) for the corresponding _C(v,k,t))_, the smallest possible number of blocks in such a Covering Design.
 - **Problem:** Each _(v,k,t)_ Covering Design has a maximum upper bound. However, this upper bound contains a lot of redundancy since each _t_-subset only needs to be covered once.
 - **Goal:** **Find the minimal upper bound.**
 
-## Table of Contents
 
+## Table of Contents
 - [Background](#background)
 - [Installation](#installation)
 - [Usage](#usage)
