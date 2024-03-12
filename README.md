@@ -14,7 +14,6 @@ Uncovering the Optimal Solution: An ILS Approach to the Covering Design Problem.
 - [Background](#background)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 
@@ -41,10 +40,6 @@ bound for many cases. Both calculations are necessary to find the covering numbe
 ## Usage
 
 [Explain how to use your thesis project. Provide examples and demonstrate its functionalities.]
-
-## Contributing
-
-[Explain how others can contribute to your project, such as reporting issues, suggesting improvements, or submitting pull requests.]
 
 ## License
 
