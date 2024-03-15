@@ -33,17 +33,15 @@ We make this distinction because the techniques for achieving improvements are d
 bound for many cases. Both calculations are necessary to find the covering number C(v, k, t). According to logical convention, that number is found when the lower bound equals the upper bound, or better formulated: we need an exact lower bound that is confirmed by a construction that can be made using the possible upper bound techniques. In cases where the covering number C(v, k, t) is not (yet) known, there is a gray area between the lower and upper bounds that can be improved by either increasing the lower bound (by proving exactly why one bound is better than the best found) or decreasing the upper bound (by demonstrating a better construction that satisfies the constraints). This research specifically focuses on improving the smallest known upper bound of (v, k, t) Covering Designs and it tries to provide a certain framework for future research into this specific problem.
 
 
-## Installation
-
-[Provide instructions on how to install and set up your thesis project. Include any dependencies or prerequisites.]
-
 ## Usage
 
-[Explain how to use your thesis project. Provide examples and demonstrate its functionalities.]
+This bachelor thesis project is available for use in further research endeavors, provided proper citation is given in accordance with academic standards. Researchers and practitioners are encouraged to utilize the project's findings, methodologies, and codebase to advance their own work in related areas.
+
+Feel free to contribute improvements, bug fixes, or new features to the project by submitting pull requests. Additionally, share your experiences and findings with the community to foster collaboration and knowledge sharing.
 
 ## License
 
-[Specify the license for your project. Choose an appropriate open-source license or specify any restrictions on usage.]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. The MIT License is a permissive open-source license that allows users to use, modify, distribute, and sublicense the project, provided that they include the original copyright notice and disclaimer. For more details about the MIT License and its terms, please refer to the [LICENSE](LICENSE) file included in this repository.
 
 ## Acknowledgements
 
