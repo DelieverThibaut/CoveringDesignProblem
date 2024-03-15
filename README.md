@@ -39,17 +39,21 @@ This bachelor thesis project is available for use in further research endeavors,
 
 Feel free to contribute improvements, bug fixes, or new features to the project by submitting pull requests. Additionally, share your experiences and findings with the community to foster collaboration and knowledge sharing.
 
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. The MIT License is a permissive open-source license that allows users to use, modify, distribute, and sublicense the project, provided that they include the original copyright notice and disclaimer. For more details about the MIT License and its terms, please refer to the [LICENSE](LICENSE) file included in this repository.
 
-## Acknowledgements
-
-[Optional: Acknowledge any individuals, organizations, or resources that have contributed to your thesis project.]
 
 ## Contact
 
-[Provide contact information for inquiries or collaboration opportunities.]
+For any inquiries, questions, or collaboration opportunities related to this project, please feel free to reach out to:
+
+Thibaut Deliever
+- Email: thibaut.deliever@gmail.com
+- GitHub: https://github.com/DelieverThibaut
+- LinkedIn: https://www.linkedin.com/in/thibaut-deliever/
+
 
 
 ## References
